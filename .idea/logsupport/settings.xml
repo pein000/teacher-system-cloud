@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="LogSupport">
+    <option name="logConfigurations">
+      <ProjectLogConfigurations>
+        <option name="defaultLogConfiguration">
+          <DefaultLogConfiguration>
+            <option name="customizedSequence" value="true" />
+            <option name="defaultFrameworkName" value="slf4j" />
+            <option name="logIdName" value="Default" />
+          </DefaultLogConfiguration>
+        </option>
+        <option name="targetedLogConfigurations">
+          <list>
+            <TargetedLogConfiguration>
+              <option name="customizedSequence" value="true" />
+              <option name="defaultFrameworkName" value="slf4j" />
+              <option name="logIdFromValue" value="0" />
+              <option name="logIdName" value="Default" />
+              <option name="logIdSequenceValue" value="40" />
+              <option name="logIdToValue" value="99999" />
+              <option name="targetScopeName" value="All" />
+            </TargetedLogConfiguration>
+          </list>
+        </option>
+      </ProjectLogConfigurations>
+    </option>
+    <option name="logIds">
+      <list>
+        <LogId>
+          <option name="name" value="Default" />
+          <option name="prefix" value="LOGGOER" />
+        </LogId>
+      </list>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/teacher-system-cloud.iml" filepath="$PROJECT_DIR$/teacher-system-cloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ts-eureka-client/ts-eureka-client.iml" filepath="$PROJECT_DIR$/ts-eureka-client/ts-eureka-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ts-eureka-invoke/ts-eureka-invoke.iml" filepath="$PROJECT_DIR$/ts-eureka-invoke/ts-eureka-invoke.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ts-eureka-server/ts-eureka-server.iml" filepath="$PROJECT_DIR$/ts-eureka-server/ts-eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ts-eureka-wechat/ts-eureka-wechat.iml" filepath="$PROJECT_DIR$/ts-eureka-wechat/ts-eureka-wechat.iml" />
+    </modules>
+  </component>
+</project>
