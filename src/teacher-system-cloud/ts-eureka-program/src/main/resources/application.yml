@@ -1,0 +1,12 @@
+server:
+  port: 8766    #指定服务端口
+  context-path: /eureka-program
+spring:
+  application:
+    name: ts-eureka-program
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
