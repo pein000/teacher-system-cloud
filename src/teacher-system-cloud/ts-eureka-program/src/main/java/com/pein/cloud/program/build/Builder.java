@@ -12,10 +12,15 @@ import com.pein.cloud.program.vo.ApiVo;
  **/
 public class Builder {
 
-    public static ApiVo build(String url) {
+    public static ApiVo build(String data) {
         ApiVo apiVo = new ApiVo();
         apiVo.setSuccess(true);
-        apiVo.setData(url);
+        apiVo.setData(data);
         return apiVo;
     }
+
+    public static ApiVo build() {
+        return new ApiVo();
+    }
+
 }

@@ -1,12 +1,31 @@
 server:
   port: 8766    #指定服务端口
-  context-path: /eureka-program
+#  context-path: /eureka-program
 spring:
   application:
     name: ts-eureka-program
+  datasource:
+#   url: jdbc:mysql://172.16.23.19:3306/customer_service?autoReconnect=true&serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://172.16.23.52:3306/teacher_system?autoReconnect=true&serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8
+    username: root
+#          password: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+  http:
+    multipart:
+      max-file-size: 10Mb
+      max-request-size: 20Mb
 eureka:
   client:
-    registerWithEureka: false
-    fetchRegistry: false
-    service-url:
+    serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+
+## mybatis
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
+  type-aliases-package: tk.mybatis.springboot.model
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+pagehelper:
+  helperDialect: mysql

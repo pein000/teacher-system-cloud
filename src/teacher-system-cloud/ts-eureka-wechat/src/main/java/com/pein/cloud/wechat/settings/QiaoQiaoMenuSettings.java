@@ -109,8 +109,8 @@ public class QiaoQiaoMenuSettings {
         return "success";
     }
 
-    public static void main(String[] args) {
-        execute();
-    }
+//    public static void main(String[] args) {
+//        execute();
+//    }
 
 }

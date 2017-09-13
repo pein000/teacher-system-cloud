@@ -9,11 +9,15 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>ts-eureka-server</module>
+        <module>ts-eureka-center</module>
         <module>ts-eureka-client</module>
         <module>ts-eureka-invoke</module>
         <module>ts-eureka-wechat</module>
         <module>ts-eureka-program</module>
+        <module>ts-eureka-ocr</module>
+        <module>ts-eureka-common</module>
+        <module>ts-eureka-zuul</module>
+        <module>ts-eureka-core</module>
     </modules>
 
     <properties>
