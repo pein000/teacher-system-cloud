@@ -1,0 +1,35 @@
+server:
+  port: 7766  #指定服务端口
+  context-path: /eureka-zuul
+spring:
+  application:
+    name: ts-eureka-zuul
+  http:
+    multipart:
+      max-file-size: 10Mb
+      max-request-size: 20Mb
+zuul:
+  routes:
+    ts-eureka-ocr:
+      path: /ts-eureka-ocr/**
+      serviceId: ts-eureka-ocr
+    ts-eureka-program:
+      path: /ts-eureka-program/**
+      serviceId: ts-eureka-program
+  host:
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 60000
+
+# Increase the Hystrix timeout to 60s (globally)
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

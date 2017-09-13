@@ -1,0 +1,12 @@
+server:
+  port: 7080    #指定服务端口
+#  context-path: /eureka-ocr
+spring:
+  application:
+    name: ts-eureka-ocr
+  external:
+    config: classpath:config.properties   #外部配置路径
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
