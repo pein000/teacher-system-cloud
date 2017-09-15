@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">头脑在线</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-grids">
+            <block>
+                <navigator url="/pages/identify/index" class="weui-grid" hover-class="weui-grid_active">
+                    <image class="weui-grid__icon" src="../../images/ico13.png" />
+                    <view class="weui-grid__label">在线识别</view>
+                </navigator>
+            </block>
+            <block>
+                <navigator url="/pages/deploy_image/index" class="weui-grid" hover-class="weui-grid_active">
+                    <image class="weui-grid__icon" src="../../images/ico12.png" />
+                    <view class="weui-grid__label">发布图文</view>
+                </navigator>
+            </block>
+            <block>
+                <navigator url="/pages/deploy_video/index" class="weui-grid" hover-class="weui-grid_active">
+                    <image class="weui-grid__icon" src="../../images/ico1.png" />
+                    <view class="weui-grid__label">发布视频</view>
+                </navigator>
+            </block>
+        </view>
+    </view>
+</view>

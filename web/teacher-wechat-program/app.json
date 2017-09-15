@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/identify/index",
+    "pages/me/index",
+    "pages/identify_success/success",
+    "pages/online/index",
+    "pages/deploy/index",
+    "pages/deploy_video/index",
+    "pages/deploy_image/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "巧巧头条",
+    "navigationBarBackgroundColor": "#F60",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh":true
+  },
+  "tabBar": {
+    "color": "#ddd",
+    "selectedColor": "#3cc51f",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath":"images/icon_nav_z-index.png",
+        "selectedIconPath":"images/icon_nav_z-index.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/online/index",
+        "iconPath": "images/icon_nav_special.png",
+        "selectedIconPath": "images/icon_nav_special.png",
+        "text": "在线"
+      },
+      {
+        "pagePath": "pages/me/index",
+        "iconPath": "images/icon_nav_widget.png",
+        "selectedIconPath": "images/icon_nav_widget.png",
+        "text": "我"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}
