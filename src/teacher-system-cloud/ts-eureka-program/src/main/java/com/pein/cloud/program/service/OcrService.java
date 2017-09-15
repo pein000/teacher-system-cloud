@@ -26,7 +26,7 @@ public class OcrService {
     private RestTemplate restTemplate;
 
     public void identify(String origin, String dest) {
-        String url = "http://ts-eureka-zuul/eureka-zuul/ts-eureka-ocr/ocr/identify";
+        String url = "http://ts.eureka.zuul/eureka-zuul/ts-eureka-ocr/ocr/identify";
         OcrRequest ocrRequest = new OcrRequest(origin, dest);
         OcrResponse ocrResponse = restTemplate.postForObject(url, ocrRequest, OcrResponse.class);
         log.info("end to identify. ocrResponse : {}.", JSON.toJSONString(ocrResponse));

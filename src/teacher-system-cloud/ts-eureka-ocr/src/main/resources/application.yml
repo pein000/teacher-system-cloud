@@ -1,9 +1,9 @@
 server:
-  port: 7080    #指定服务端口
+  port: 8764    #指定服务端口
 #  context-path: /eureka-ocr
 spring:
   application:
-    name: ts-eureka-ocr
+    name: ts.eureka.ocr
   external:
     config: classpath:config.properties   #外部配置路径
 eureka:

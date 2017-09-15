@@ -2,7 +2,7 @@ server:
   port: 8761     #指定服务端口
 spring:
   application:
-    name: ts-eureka-center
+    name: ts.eureka.center
 eureka:
   client:
     registerWithEureka: false  #是否将eureka自身作为应用注册到eureka注册中心

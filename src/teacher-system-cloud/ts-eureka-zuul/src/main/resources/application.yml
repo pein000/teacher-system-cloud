@@ -1,9 +1,9 @@
 server:
-  port: 7766  #指定服务端口
+  port: 8768  #指定服务端口
   context-path: /eureka-zuul
 spring:
   application:
-    name: ts-eureka-zuul
+    name: ts.eureka.zuul
   http:
     multipart:
       max-file-size: 10Mb
@@ -12,10 +12,10 @@ zuul:
   routes:
     ts-eureka-ocr:
       path: /ts-eureka-ocr/**
-      serviceId: ts-eureka-ocr
+      serviceId: ts.eureka.ocr
     ts-eureka-program:
       path: /ts-eureka-program/**
-      serviceId: ts-eureka-program
+      serviceId: ts.eureka.program
   host:
     connect-timeout-millis: 10000
     socket-timeout-millis: 60000

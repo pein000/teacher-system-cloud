@@ -12,7 +12,7 @@ public class TeacherUserInfo {
     private String name;
     private String phone;
     private String password;
-    private String solt;
+    private String salt;
     private String token;
     private Timestamp expire_time;
     private Timestamp createTime;
@@ -50,12 +50,12 @@ public class TeacherUserInfo {
         this.password = password;
     }
 
-    public String getSolt() {
-        return solt;
+    public String getSalt() {
+        return salt;
     }
 
-    public void setSolt(String solt) {
-        this.solt = solt;
+    public void setSalt(String salt) {
+        this.salt = salt;
     }
 
     public String getToken() {

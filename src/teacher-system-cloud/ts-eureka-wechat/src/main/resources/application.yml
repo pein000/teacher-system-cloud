@@ -1,9 +1,9 @@
 server:
-  port: 8787     #指定服务端口
+  port: 8767     #指定服务端口
   context-path: /eureka-wechat
 spring:
   application:
-    name: ts-eureka-wechat
+    name: ts.eureka.wechat
 eureka:
   client:
     registerWithEureka: false  #是否将eureka自身作为应用注册到eureka注册中心

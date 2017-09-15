@@ -18,6 +18,7 @@
         <module>ts-eureka-common</module>
         <module>ts-eureka-zuul</module>
         <module>ts-eureka-core</module>
+        <module>ts-eureka-turbine</module>
     </modules>
 
     <properties>

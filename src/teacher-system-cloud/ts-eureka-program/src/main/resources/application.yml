@@ -1,9 +1,9 @@
 server:
-  port: 8766    #指定服务端口
+  port: 8765    #指定服务端口
 #  context-path: /eureka-program
 spring:
   application:
-    name: ts-eureka-program
+    name: ts.eureka.program
   datasource:
 #   url: jdbc:mysql://172.16.23.19:3306/customer_service?autoReconnect=true&serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8
     url: jdbc:mysql://172.16.23.52:3306/teacher_system?autoReconnect=true&serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8
