@@ -12,6 +12,7 @@ import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
@@ -28,9 +29,12 @@ public class IdentifyController {
     @Autowired
     private OcrService ocrService;
 
+    @Value("${program.hello}")
+    private String helloProgram = "no data";
+
     @RequestMapping("upload")
     public ApiVo upload(MultipartFile file, String phone) {
-        LOGGER.info("upload file : phone = {}.", phone);
+        LOGGER.info("upload file : phone = {}. helloProgram : {}", phone, helloProgram);
         String url = identifyService.storeNative(file);
         LOGGER.info("end to upload file : url = {}.", url);
         if (StringUtils.isEmpty(url)) {
@@ -51,5 +55,4 @@ public class IdentifyController {
         LOGGER.info("end to save paper. teacherOcrPaper : {}.", JSON.toJSONString(teacherOcrPaper));
         return Builder.build(JSON.toJSONString(teacherOcrPaper));
     }
-
 }

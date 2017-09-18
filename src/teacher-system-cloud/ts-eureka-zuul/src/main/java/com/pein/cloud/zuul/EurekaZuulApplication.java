@@ -12,6 +12,8 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 /**
  * @author qiuwei
  * @create 2017-07-12 19:24
+ *
+ * 网关服务，提供Api中转
  **/
 @EnableZuulProxy
 @EnableDiscoveryClient

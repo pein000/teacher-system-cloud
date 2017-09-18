@@ -4,6 +4,11 @@ server:
 spring:
   application:
     name: ts.eureka.program
+  cloud:
+    config:
+#      env:  default
+      label: master
+#      uri: http://localhost:8769
   datasource:
 #   url: jdbc:mysql://172.16.23.19:3306/customer_service?autoReconnect=true&serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8
     url: jdbc:mysql://172.16.23.52:3306/teacher_system?autoReconnect=true&serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8
@@ -16,6 +21,7 @@ spring:
     multipart:
       max-file-size: 10Mb
       max-request-size: 20Mb
+
 eureka:
   client:
     serviceUrl:

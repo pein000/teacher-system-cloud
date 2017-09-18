@@ -19,6 +19,7 @@
         <module>ts-eureka-zuul</module>
         <module>ts-eureka-core</module>
         <module>ts-eureka-turbine</module>
+        <module>ts-eureka-config</module>
     </modules>
 
     <properties>
