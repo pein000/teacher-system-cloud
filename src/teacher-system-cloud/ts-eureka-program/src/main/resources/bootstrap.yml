@@ -1,14 +1,16 @@
 server:
   port: 8765    #指定服务端口
 #  context-path: /eureka-program
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8701/eureka/,http://localhost:8702/eureka/,http://localhost:8703/eureka/
+  instance:
+    metadata-map:
+      cluster:  MAIN
 spring:
   application:
     name: ts.eureka.program
-  cloud:
-    config:
-#      env:  default
-      label: master
-#      uri: http://localhost:8769
   datasource:
 #   url: jdbc:mysql://172.16.23.19:3306/customer_service?autoReconnect=true&serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8
     url: jdbc:mysql://172.16.23.52:3306/teacher_system?autoReconnect=true&serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8
@@ -21,12 +23,20 @@ spring:
     multipart:
       max-file-size: 10Mb
       max-request-size: 20Mb
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-
+  rabbitmq: ## rabbitmq 用于配置中心热部署
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin
+#    virtual-host: spring_cloud_virtual
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: ts.eureka.config #配置客户端从注册中心根据名称获取配置的服务端地址
+    bus:
+      trace:
+        enabled: true   #开启消息跟踪
 ## mybatis
 mybatis:
   mapper-locations: classpath*:mapper/*.xml
@@ -35,3 +45,6 @@ mybatis:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 pagehelper:
   helperDialect: mysql
+management:
+  security:
+    enabled: true   #刷新时，关闭安全验证

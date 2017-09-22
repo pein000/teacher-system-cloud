@@ -1,0 +1,8 @@
+server:
+  port: 8702     #指定服务端口
+eureka:
+  instance:
+    hostname: nodeB
+  client:
+    service-url:
+      defaultZone: http://localhost:8701/eureka/,http://localhost:8703/eureka/

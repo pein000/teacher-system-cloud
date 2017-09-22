@@ -29,12 +29,9 @@ public class IdentifyController {
     @Autowired
     private OcrService ocrService;
 
-    @Value("${program.hello}")
-    private String helloProgram = "no data";
-
     @RequestMapping("upload")
     public ApiVo upload(MultipartFile file, String phone) {
-        LOGGER.info("upload file : phone = {}. helloProgram : {}", phone, helloProgram);
+        LOGGER.info("upload file : phone = {}. ", phone);
         String url = identifyService.storeNative(file);
         LOGGER.info("end to upload file : url = {}.", url);
         if (StringUtils.isEmpty(url)) {

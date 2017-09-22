@@ -24,36 +24,12 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring.boot.version>1.4.2.RELEASE</spring.boot.version>
-        <netflix-version>1.2.2.RELEASE</netflix-version>
-        <spring.version>4.3.6.RELEASE</spring.version>
         <jackson.version>2.8.6</jackson.version>
         <servlet.version>2.5</servlet.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-netflix-eureka-server -->
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-netflix-eureka-server</artifactId>
-                <version>${netflix-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-netflix-core</artifactId>
-                <version>${netflix-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-web</artifactId>
-                <version>${spring.boot.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-actuator</artifactId>
-                <version>${spring.boot.version}</version>
-            </dependency>
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>servlet-api</artifactId>
@@ -114,13 +90,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>1.4.0.RELEASE</version>
-                <!--<configuration>-->
-                <!--&lt;!&ndash;<mainClass>com.pein.teacher.MysqlApplication</mainClass>&ndash;&gt;-->
-                <!--&lt;!&ndash;<mainClass>${start-class}</mainClass>&ndash;&gt;-->
-                <!--<addResources>true</addResources>-->
-                <!--&lt;!&ndash;<finalName>secured</finalName>&ndash;&gt;-->
-                <!--&lt;!&ndash;<classifier>secured</classifier>&ndash;&gt;-->
-                <!--</configuration>-->
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

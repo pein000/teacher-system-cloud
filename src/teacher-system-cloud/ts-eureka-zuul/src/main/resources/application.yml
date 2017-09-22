@@ -16,6 +16,12 @@ zuul:
     ts-eureka-program:
       path: /ts-eureka-program/**
       serviceId: ts.eureka.program
+    ts-eureka-turbine:
+      path: /ts-eureka-turbine/**
+      serviceId: ts.eureka.turbine
+    ts-eureka-client:
+      path: /ts-eureka-client/**
+      serviceId: ts.eureka.client
   host:
     connect-timeout-millis: 10000
     socket-timeout-millis: 60000
@@ -32,4 +38,4 @@ hystrix:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://localhost:8701/eureka/,http://localhost:8702/eureka/,http://localhost:8703/eureka/

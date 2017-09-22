@@ -5,7 +5,8 @@ spring:
     name: ts.eureka.client
 eureka:
   client:
-    registerWithEureka: false
-    fetchRegistry: false
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://localhost:8701/eureka/,http://localhost:8702/eureka/,http://localhost:8703/eureka/
+  instance:
+    metadata-map:
+      cluster:  MAIN

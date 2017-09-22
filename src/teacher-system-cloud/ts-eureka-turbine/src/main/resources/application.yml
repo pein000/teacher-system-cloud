@@ -4,7 +4,8 @@ spring:
   application:
     name: ts.eureka.turbine
 turbine:
-  appConfig:  ts.eureka.program,node02
+  appConfig:  ts.eureka.program,ts.eureka.client
+#  app-config-list: ts.eureka.zuul,ts.eureka.config,ts.eureka.program
   aggregator:
     clusterConfig: MAIN
   clusterNameExpression: metadata['cluster']

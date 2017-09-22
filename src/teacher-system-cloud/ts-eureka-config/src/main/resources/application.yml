@@ -12,8 +12,20 @@ spring:
           timeout: 30000
           username: root
           password: 12345678
+    bus:
+      trace: ## 开启消息跟踪
+        enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin
+#    virtual-host: spring_cloud_virtual
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://localhost:8701/eureka/,http://localhost:8702/eureka/,http://localhost:8703/eureka/
+management:
+  security: ## 刷新时，关闭安全验证
+    enabled: false
