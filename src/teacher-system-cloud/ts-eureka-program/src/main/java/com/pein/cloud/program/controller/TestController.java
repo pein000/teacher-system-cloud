@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.Random;
 
@@ -29,6 +30,9 @@ public class TestController {
     @Autowired
     private ProgramConfig programConfig;
 
+    @Autowired
+    private RestTemplate restTemplate;
+
     @RequestMapping("config")
     public String config() {
         LOGGER.info("the program.hello value = {}. ", programConfig.getHelloProgram());
@@ -45,14 +49,20 @@ public class TestController {
     }
 
 
-    @RequestMapping("hystrix_Two")
+    @RequestMapping("hystrix_two")
     @HystrixCommand(fallbackMethod="hystrixError") //熔断器配置，失败则调用hystrixError()方法
     public String hystrixTwo() {
-        return "hystrix one";
+
+        return "hystrix two";
     }
 
     public String hystrixError() {
         return "hystrix error";
+    }
+
+    @RequestMapping("zipkin_sleuth")
+    public String zipkinSleuth() {
+        return restTemplate.getForEntity("http://TS.EUREKA.CLIENT/hello?a=10&b=20", String.class).getBody();
     }
 
 }

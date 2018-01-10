@@ -1,5 +1,5 @@
 server:
-  port: 8766
+  port: 8751
 spring:
   application:
     name: ts.eureka.turbine
@@ -12,4 +12,4 @@ turbine:
 eureka:
   client:
     serviceUrl:
-      defaultZone:  http://localhost:8761/eureka/
+      defaultZone:  http://localhost:8701/eureka/,http://localhost:8702/eureka/,http://localhost:8703/eureka/

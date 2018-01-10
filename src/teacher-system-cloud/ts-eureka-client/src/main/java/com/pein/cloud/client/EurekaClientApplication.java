@@ -7,7 +7,9 @@ import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 
 /**
- * Created by pein on 2017/6/3.
+ *
+ * @author pein
+ * @date 2017/6/3
  */
 @EnableEurekaClient
 @SpringBootApplication

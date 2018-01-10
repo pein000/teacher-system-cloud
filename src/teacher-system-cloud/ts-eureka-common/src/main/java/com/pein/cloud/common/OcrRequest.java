@@ -1,7 +1,9 @@
 package com.pein.cloud.common;
 
 /**
- * Created by qiuwei on 2017/2/27.
+ *
+ * @author qiuwei
+ * @date 2017/2/27
  */
 public class OcrRequest {
 

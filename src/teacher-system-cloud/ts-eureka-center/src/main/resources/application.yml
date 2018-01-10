@@ -4,4 +4,4 @@ spring:
 eureka:
   client:
     registerWithEureka: true  #是否将eureka自身作为应用注册到eureka注册中心
-    fetchRegistry: true       #为true时，可以启动，但报异常：Cannot execute request on any known server
+    fetchRegistry: true       #为true时，可以启动.使用注册中心集群时使用

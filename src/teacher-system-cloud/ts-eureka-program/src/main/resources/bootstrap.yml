@@ -1,5 +1,5 @@
 server:
-  port: 8765    #指定服务端口
+  port: 8731    #指定服务端口
 #  context-path: /eureka-program
 eureka:
   client:
@@ -11,6 +11,14 @@ eureka:
 spring:
   application:
     name: ts.eureka.program
+#  zipkin:  # http 方式链路追踪
+#    base-url: http://localhost:8741 # zipkin服务
+#    enabled: true
+  sleuth:
+    rxjava:
+      schedulers:
+        hook:
+          enabled: false
   datasource:
 #   url: jdbc:mysql://172.16.23.19:3306/customer_service?autoReconnect=true&serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8
     url: jdbc:mysql://172.16.23.52:3306/teacher_system?autoReconnect=true&serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8
@@ -23,7 +31,7 @@ spring:
     multipart:
       max-file-size: 10Mb
       max-request-size: 20Mb
-  rabbitmq: ## rabbitmq 用于配置中心热部署
+  rabbitmq: ## rabbitmq 用于配置中心热部署 、链路追踪
     host: localhost
     port: 5672
     username: admin
@@ -37,6 +45,7 @@ spring:
     bus:
       trace:
         enabled: true   #开启消息跟踪
+
 ## mybatis
 mybatis:
   mapper-locations: classpath*:mapper/*.xml

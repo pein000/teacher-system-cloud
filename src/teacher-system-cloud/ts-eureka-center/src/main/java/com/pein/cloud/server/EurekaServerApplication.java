@@ -5,7 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
- * Created by pein on 2017/6/3.
+ *
+ * @author pein
+ * @date 2017/6/3
  *
  * java -jar --spring.profiles.active=nodeA
  * java -jar --spring.profiles.active=nodeB
@@ -15,7 +17,10 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 @SpringBootApplication
 public class EurekaServerApplication {
 
-    //spirng boot的标准入口
+    /**
+     * spring boot的标准入口
+     * @param args
+     */
     public static void main(String[] args) {
         SpringApplication.run(EurekaServerApplication.class, args);
     }

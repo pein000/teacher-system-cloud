@@ -1,8 +1,21 @@
 server:
-  port: 8762    #指定服务端口
+  port: 8711    #指定服务端口
 spring:
   application:
     name: ts.eureka.client
+#  zipkin: # http 方式链路追踪
+#    base-url: http://localhost:8741  # zipkin服务
+#    enabled: true
+  sleuth:
+    rxjava:
+      schedulers:
+        hook:
+          enabled: false
+  rabbitmq: ## rabbitmq 用于配置中心热部署 、链路追踪
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin
 eureka:
   client:
     service-url:

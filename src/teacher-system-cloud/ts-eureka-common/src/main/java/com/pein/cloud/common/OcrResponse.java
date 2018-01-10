@@ -1,7 +1,9 @@
 package com.pein.cloud.common;
 
 /**
- * Created by qiuwei on 2017/2/27.
+ *
+ * @author qiuwei
+ * @date 2017/2/27
  */
 public class OcrResponse {
     private String origin;
@@ -9,9 +11,6 @@ public class OcrResponse {
     private String dest;
 
     private String content;
-
-    public OcrResponse() {
-    }
 
     public OcrResponse(String origin, String dest) {
         this.origin = origin;

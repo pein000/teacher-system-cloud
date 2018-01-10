@@ -20,6 +20,7 @@
         <module>ts-eureka-core</module>
         <module>ts-eureka-turbine</module>
         <module>ts-eureka-config</module>
+        <module>ts-eureka-sleuth</module>
     </modules>
 
     <properties>

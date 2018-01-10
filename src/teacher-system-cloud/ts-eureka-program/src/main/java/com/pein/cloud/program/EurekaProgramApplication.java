@@ -12,7 +12,9 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * Created by pein on 2017/6/3.
+ *
+ * @author pein
+ * @date 2017/6/3
  *
  * 配置文件加载 bootstrap -> application
  * 在获取

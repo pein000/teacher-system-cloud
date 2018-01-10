@@ -1,5 +1,5 @@
 server:
-  port: 8768  #指定服务端口
+  port: 8761  #指定服务端口
   context-path: /eureka-zuul
 spring:
   application:

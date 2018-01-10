@@ -9,7 +9,7 @@ import org.springframework.cloud.netflix.turbine.EnableTurbine;
 /**
  * Created by pein on 2017/6/3.
  * eureka集群监控(断路器聚合监控)
- * http://localhost:8766/hystrix ——> http://localhost:8766/turbine.stream
+ * http://localhost:8751/hystrix ——> http://localhost:8751/turbine.stream
  */
 @SpringBootApplication
 @EnableDiscoveryClient
