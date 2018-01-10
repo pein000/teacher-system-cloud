@@ -1,0 +1,29 @@
+server:
+  port: 8741    #指定服务端口
+spring:
+  application:
+    name: ts.eureka.sleuth
+  zipkin:
+    enabled: true
+  sleuth:
+    enabled: false
+    sampler:
+      percentage: 1.0  # 采样率 1.0 默认0.1
+    zuul:
+      enabled: false
+    rxjava:
+      schedulers:
+        hook:
+          enabled: false # RxJavaSchedulersHook 失效
+  rabbitmq: #rabbitmq配置
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8701/eureka/,http://localhost:8702/eureka/,http://localhost:8703/eureka/
+  instance:
+    metadata-map:
+      cluster:  MAIN
