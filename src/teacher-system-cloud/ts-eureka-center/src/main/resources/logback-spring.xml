@@ -20,6 +20,6 @@
     </appender>
 
     <root level="INFO">
-        <appender-ref ref="console"/>
+        <appender-ref ref="rollingFile"/>
     </root>
 </configuration>
