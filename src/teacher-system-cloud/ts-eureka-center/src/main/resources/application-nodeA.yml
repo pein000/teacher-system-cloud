@@ -7,4 +7,4 @@ eureka:
     service-url:
 #      defaultZone: http://localhost:8702/eureka/,http://localhost:8703/eureka/
 # 使用容器技术部署
-      defaultZone: http://${node_ip_2}:8701/eureka/,http://${node_ip_3}:8701/eureka/
+      defaultZone: http://${node_ip_2}/eureka/,http://${node_ip_3}/eureka/
